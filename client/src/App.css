@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+/**********************************************   N A V B A R **************************************/
+:root {
+  --primary-white: #fff;
+  --primary-yellow: #ffdf00;
+  --primary-dark: rgba(255, 255, 255, 0)
+}
+
+.navbar {
+  min-height: 100px;
+}
+
+nav {
+  box-shadow: 2px 2px 12px rgb(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav a, nav p {
+  margin: 30px;
+  font-family: 'Calibri';
+  font-size: 20px;
+  font-weight: 50;
+  color: var(--primary-white) !important;
+}
+
+nav p {
+  font-stretch: wider;
+}
+
+.navbar-nav > li > a {
+  border-top: 3px solid var(--primary-dark);
+}
+
+nav a.nav link {
+  cursor: pointer;
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
+  border-top: 3px solid var(--primary-yellow);
+}
+
+.navbar-nav > li > a:hover {
+  border-top: 3px solid var(--primary-yellow);
+}
+
