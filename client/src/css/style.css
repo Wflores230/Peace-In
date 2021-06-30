@@ -1,0 +1,239 @@
+:root {
+    --white: white;
+    --main: rgb(245, 212, 212);
+    --blue: darkcyan;
+    --darkgrey: rgb(112, 116, 112);
+    --aqua: hsl(177, 86%, 66%);
+    --black: rgb(34, 33, 33);
+    --hover: hsl(12, 74%, 46%);
+    --lavender: rgb(8, 8, 63);
+    --grey: rgb(207, 197, 197);
+}
+
+body{
+    background-color: var(--white);
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    padding: 0;
+    background-image: url('/src/images/w.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+/*.wrapper_w {
+    margin: 40px; 
+}*/
+
+header {
+    color: rgb(205, 243, 205);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    display: inline-block;
+    font-size: 42px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    text-shadow:  2px 2px 5px black;
+}
+wrapper {
+    float: center;
+}
+.nav {
+    padding-top: 0;
+    text-align: center;
+    justify-content: space-between;
+    
+    margin: 0;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: var(--aqua);
+    cursor: hand;
+}
+
+a {
+    color: var(--black);
+    
+}
+
+main section {
+    color: var(--black);
+}
+
+main section img {
+    width: 300px;
+    float: right;
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    width: 33%;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 25px;
+    color: rgb(238, 14, 163);
+    text-shadow:  2px 2px 5px white;
+
+}
+
+p {
+    font-size: 19px;
+    padding-top: 40px;
+    text-align: 33%;
+}
+
+
+.work-container {
+    display: flex;
+    justify-content:space-around;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.content_img {
+    position: relative;
+    font-family: sans-serif;
+    padding: 10px;
+    float: right;
+}
+
+.content_img:hover {
+    background-color: rgb(228, 213, 213);
+    border-radius: 10%;
+}
+
+.content_img div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--black);
+    color: var(--white);
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0s,opacity 0.5s linear;
+    transition: visability 0s, opacity 0.5s linear;
+    border-radius: 0 0 25px;
+}
+
+.content_img:hover div {
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.contact a{
+    color: var(--black);
+}
+
+ h3 {
+    float:left;
+    font-size: 35px;
+    text-align: left;
+    padding-top: 30px;
+    margin: 0 auto;
+    font-size: 35px;
+}
+
+.review {
+    padding: 40px;
+    float: center;
+    margin: 10 10 10 10; 
+    font-size:20px;
+}
+
+h4 {
+    font-family: cursive;
+    
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        min-width: 40rem;
+    }
+    .work {
+        display: inline-flex;
+        float: left;
+    }
+    .work-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: auto;
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    
+    .content_img {
+        position: relative;
+        font-family: sans-serif;
+        padding: 10px;
+        float: right;
+    }
+    
+    .content_img:hover {
+        background-color: blue;
+        border-radius: 10%;
+    }
+    
+    .content_img div {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: var(--darkgrey);
+        color: var(--white);
+        margin-bottom: 5px;
+        font-family: sans-serif;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: 0s,opacity 0.5s linear;
+        transition: visability 0s, opacity 0.5s linear;
+        border-radius: 0 0 25px;
+    }
+    
+    .content_img:hover div {
+        width: 150px;
+        padding: 8px 15px;
+        visibility: visible;
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    
+    .contact a{
+        color: var(--black);
+    }
+    
+     h3 {
+        float:left;
+        font-size: 35px;
+        text-align: left;
+        padding-top: 30px;
+        margin: 0 auto;
+        font-size: 35px;
+    }
+    
+    .review, ul li {
+        padding: 40px;
+        float: right;
+        margin-right: 20px;
+        margin: 10 10 10 10; 
+        font-size:20px;
+    }
+    
+    h4 {
+        font-family: cursive;
+        
+    }
+    
+
+}
