@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import './css/reset.css';
-import './css/style.css';
-import Meditation from './images/medit.jpg'
-import Yoga from './images/yog.jpg'
-import Streching from './images/str.jpg'
-import Homeworkout from './images/hw.jpg'
+import '../css/reset.css';
+import '../css/style.css';
+import Meditation from '../images/medit.jpg'
+import Yoga from '../images/yog.jpg'
+import Streching from '../images/str.jpg'
+import Homeworkout from '../images/hw.jpg'
 
 
-const homepage = () => {
+const Homepage = () => {
     return (
-
-
         <div class="wrapper_w">
 
             <header>
@@ -66,4 +64,4 @@ const homepage = () => {
     );
 }
 
-export default homepage;
+export default Homepage;
