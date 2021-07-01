@@ -14,11 +14,7 @@ const Homepage = () => {
             <header>
 
                 <h1>Peace In</h1>
-                <nav class="nav">
-                    <a href="#Login">Log In</a>
-                    <a href="#About">About</a>
-                    <a href="Review">Review</a>
-                </nav>
+
             </header>
             <main>
                 <section>
