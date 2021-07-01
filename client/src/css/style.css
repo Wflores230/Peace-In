@@ -40,12 +40,12 @@ wrapper {
     float: center;
 }
 .nav {
+    font-size: large;
     padding-top: 0;
     text-align: center;
     justify-content: space-between;
     
-    margin: 0;
-    font-size: 20px;
+    
 }
 
 a:hover {
