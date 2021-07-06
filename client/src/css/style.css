@@ -12,7 +12,7 @@
 
 body{
     background-color: var(--white);
-    margin: 0;
+    margin: 10px 10px 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
     padding: 0;
@@ -71,7 +71,7 @@ main section img {
 }
 
 h1 {
-    font-size: 50px;
+    color:rgb(238, 14, 163);
 }
 
 h2 {
@@ -157,6 +157,8 @@ h4 {
     font-family: cursive;
     
 }
+
+
 
 @media screen and (max-width: 768px) {
     body {
