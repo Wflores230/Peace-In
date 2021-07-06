@@ -6,7 +6,7 @@ const Nav = () => {
             <a href="Login">Log In</a>
             <a href="/">Main Menu</a>
             <a href="Review">Review</a>
-            <a href="Review">Favorites</a>
+            <a href="Favorites">Favorites</a>
         </nav>
     )
 }

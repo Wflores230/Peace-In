@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-function Favorites(props) {
+const Favorites = () => {
     return (
 
         <div class="favorites">
