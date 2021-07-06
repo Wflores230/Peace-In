@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { request, response } = require("express");
 const User = require("../models/userModel");
 
-router.post('/signup', (req, res) =>{
+router.post('/login', (request, response) =>{
     const signedUpUser = new User({
         fullname:request.body.fullname,
         username: request.body.username,
@@ -17,7 +17,5 @@ router.post('/signup', (req, res) =>{
         response.json(error)
     })
 });
-
-router.get('/signin')
 
 module.exports = router

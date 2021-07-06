@@ -16,6 +16,8 @@ mongoose.connect(
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
-app.use('/app', routes);
+const usersRouter = require('./routes/users')
+
+app.use('/Login', usersRouter)
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
