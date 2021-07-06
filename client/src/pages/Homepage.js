@@ -46,11 +46,8 @@ const Homepage = () => {
                     </div>
                 </section>
                 <section>
-                    <div class="review">
-                        <h2>Review</h2>
-                        <ul>
-                            <li><a href="https://accounts.google.com" target="_blank">google</a></li>
-                        </ul>
+                    <div class="about">
+                        <h2>About</h2>
                     </div>
                 </section>
             </main>

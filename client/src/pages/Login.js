@@ -1,54 +1,49 @@
-import React, { Component } from "react";
 
+import React from 'react'
+import { Grid, Paper, Avatar, TextField, Button, Typography, Link } from '@material-ui/core'
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
-function Login(props) {
+const Login = () => {
+
+    const paperStyle = { padding: 20, height: '70vh', width: 280, margin: "20px auto" }
+    const avatarStyle = { backgroundColor: '#1bbd7e' }
+    const btnstyle = { margin: '8px 0' }
+    const signupColor = { color: '#e632ea' }
+    const loginColor = { padding: '70px', color: 'white', width: 360, float: 'left', margin: '8px 0' }
     return (
-
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Log In</h2>
-
-                <form class="form login-form">
-                    <div class="form-group">
-                        <label for="email-login">email:</label>
-                        <input class="form-input" type="text" id="email-login" />
-                    </div>
-                    <div class="form-group">
-                        <label for="password-login">password:</label>
-                        <input class="form-input" type="password" id="password-login" />
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary" type="submit">log in</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col-md-6">
-                <h2>Sign up</h2>
-
-                <form class="form signup-form">
-                    <div class="form-group">
-                        <label for="name-signup">name:</label>
-                        <input class="form-input" type="text" id="name-signup" />
-                    </div>
-                    <div class="form-group">
-                        <label for="birthday-signup">username:</label>
-                        <input class="form-input" type="text" id="birthday-signup" />
-                    </div>
-                    <div class="form-group">
-                        <label for="email-signup">email:</label>
-                        <input class="form-input" type="text" id="email-signup" />
-                    </div>
-                    <div class="form-group">
-                        <label for="password-signup">password:</label>
-                        <input class="form-input" type="password" id="password-signup" />
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary" type="submit">signup</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
+        <Grid>
+            <Paper elevation={10} style={paperStyle}>
+                <Grid align='center'>
+                    <Avatar style={avatarStyle}><LockOutlinedIcon /></Avatar>
+                    <h1>Sign In</h1>
+                </Grid>
+                <TextField label='Username' placeholder='Enter username' fullWidth required />
+                <TextField label='Password' placeholder='Enter password' type='password' fullWidth required />
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            name="checkedB"
+                            color="primary"
+                        />
+                    }
+                    label="Remember me"
+                />
+                <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                <Typography >
+                    <Link href="#" >
+                        Forgot password ?
+                    </Link>
+                </Typography>
+                <Typography style={loginColor}> Do you have an account ?
+                    <Link style={signupColor} href="#" >
+                        Sign Up
+                    </Link>
+                </Typography>
+            </Paper>
+        </Grid>
+    )
 }
+
 export default Login;
