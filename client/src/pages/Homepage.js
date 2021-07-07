@@ -28,19 +28,19 @@ const Homepage = () => {
                     </div>
                     <div class="work-container">
                         <div class="content_img">
-                            <a href="https://github.com/GulshatT/TicketTask"><img src={Meditation} /></a>
+                            <a href="/meditation"><img src={Meditation} /></a>
                             <div>Meditation</div>
                         </div>
                         <div class="content_img">
-                            <a href="https://gulshatt.github.io/lyric-search/"><img src={Yoga} /></a>
+                            <a href="/yoga"><img src={Yoga} /></a>
                             <div>Yoga</div>
                         </div>
                         <div class="content_img">
-                            <a href="https://gulshatt.github.io/HW5-Scheduler/"><img src={Streching} /></a>
+                            <a href="/streching"><img src={Streching} /></a>
                             <div>Streching</div>
                         </div>
                         <div class="content_img">
-                            <a href="https://github.com/GulshatT/HW-Weather-dashboard"><img src={Homeworkout} /></a>
+                            <a href="/homeworkout"><img src={Homeworkout} /></a>
                             <div>Home Workout</div>
                         </div>
                     </div>
