@@ -37,12 +37,13 @@ const Login = () => {
                     </Link>
                 </Typography>
                 <Typography style={loginColor}> Do you have an account ?
-                    <Link style={signupColor} href="#" >
+                    < a href="/signup" style={signupColor} >
                         Sign Up
-                    </Link>
+                    </a>
                 </Typography>
             </Paper>
         </Grid>
+
     )
 }
 
