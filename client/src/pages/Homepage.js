@@ -3,7 +3,7 @@ import '../css/reset.css';
 import '../css/style.css';
 import Meditation from '../images/medit.jpg'
 import Yoga from '../images/yog.jpg'
-import Streching from '../images/str.jpg'
+import Stretching from '../images/str.jpg'
 import Homeworkout from '../images/hw.jpg'
 
 
@@ -36,8 +36,8 @@ const Homepage = () => {
                             <div>Yoga</div>
                         </div>
                         <div class="content_img">
-                            <a href="/streching"><img src={Streching} /></a>
-                            <div>Streching</div>
+                            <a href="/stretching"><img src={Stretching} /></a>
+                            <div>Stretching</div>
                         </div>
                         <div class="content_img">
                             <a href="/homeworkout"><img src={Homeworkout} /></a>

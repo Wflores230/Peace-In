@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
 
 
-const Yoga = (props) => {
-
+const Meditation = (props) => {
     const [results, setResults] = useState([])
 
     useEffect(async () => {
-        const results = await props.search("yoga")
-        console.log(results.data)
+        const results = await props.search("meditation")
         setResults(results.data)
     }, [])
-
     return (
-
         <>
             <section>
-                <h2>Yoga</h2>
+                <h2>Meditation</h2>
                 {results.map(result => (
                     <div class="content_img">
                         <a href={`https://www.youtube.com/watch?v=${result.id.videoId}`}><img src={result.snippet.thumbnails.default.url} /></a>
-                        <div>Yoga</div>
+                        <div>Meditation</div>
                     </div>
                 ))}
             </section>
@@ -28,4 +24,4 @@ const Yoga = (props) => {
     );
 }
 
-export default Yoga;
+export default Meditation;
