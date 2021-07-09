@@ -9,8 +9,8 @@ import Homeworkout from '../images/hw.jpg'
 
 const Homepage = () => {
     return (
-        <div class="wrapper_w">
 
+        <>
             <header>
 
                 <h1>Peace In</h1>
@@ -51,8 +51,7 @@ const Homepage = () => {
                     </div>
                 </section>
             </main>
-        </div>
-
+        </>
 
     );
 }
