@@ -25,6 +25,10 @@ body{
     margin: 40px; 
 }*/
 
+.col-md-6 {
+    margin: 6px;
+    float: right;
+}
 header {
     color: rgb(205, 243, 205);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -34,10 +38,10 @@ header {
     padding: 20px;
     text-align: center;
     width: 100%;
-    text-shadow:  2px 2px 5px black;
+    text-shadow:  2px 2px 5px rgb(92, 63, 63);
 }
 wrapper {
-    float: center;
+    float: right;
 }
 .nav {
     font-size: large;
@@ -71,17 +75,15 @@ main section img {
 }
 
 h1 {
-    color:rgb(238, 14, 163);
+    color: pink;
 }
 
 h2 {
-    width: 33%;
+    
     padding: 10px;
-    margin: 0 auto;
+    margin: auto;
     font-size: 25px;
-    color: rgb(238, 14, 163);
-    text-shadow:  2px 2px 5px white;
-
+    color: rgb(42, 6, 59);
 }
 
 p {
@@ -94,15 +96,15 @@ p {
 .work-container {
     display: flex;
     justify-content:space-around;
-    padding-top: 50px;
-    padding-bottom: 80px;
+    
 }
 
 .content_img {
     position: relative;
     font-family: sans-serif;
     padding: 10px;
-    float: right;
+    float: left;
+    
 }
 
 .content_img:hover {
