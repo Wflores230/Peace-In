@@ -6,14 +6,13 @@ import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 import Favorites from './pages/Favorites';
 
-
 function App() {
   return (
     <Router>
       <div>
         <Navbar></Navbar>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/Login" component={Login} />
         <Route exact path="/favorites" component={Favorites} />
       </div>
     </Router>
