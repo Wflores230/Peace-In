@@ -84,6 +84,9 @@ h2 {
     margin: auto;
     font-size: 25px;
     color: rgb(42, 6, 59);
+    text-shadow:  2px 2px 5px rgb(231, 236, 235);
+    text-align: center;
+
 }
 
 p {
