@@ -25,16 +25,22 @@ function App() {
 
   // }, [])
 
+  const [user, setUser] = useState(false)
+
   const getYoutubeResults = async (type) => {
     return await API.getYoutubeResults(type)
+  }
+
+  const handleUserLogin = () => {
+    setUser(true)
   }
 
   return (
     <Router>
       <div>
-        <Navbar></Navbar>
+        <Navbar user={user}></Navbar>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/Login" component={Login} />
+        <Route exact path="/Login" render={(props) => <Login {...props} handleUserLogin={handleUserLogin} />} />
         <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/yoga" render={(props) => <Yoga {...props} search={getYoutubeResults} />} />

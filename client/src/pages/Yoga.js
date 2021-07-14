@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button } from 'reactstrap';
 
 
 const Yoga = (props) => {
@@ -22,7 +23,9 @@ const Yoga = (props) => {
                         <div>Yoga</div>
                     </div>
                 ))}
+                <Button></Button>
             </section>
+            <Button></Button>
         </>
 
     );

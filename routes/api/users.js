@@ -1,15 +1,25 @@
 const router = require('express').Router();
 // User Model
 const User = require('../../models/User');
+const UserSession = require('../../models/UserSession')
+
+router.get('/', (req, res) => {
+    User.find()
+        .sort({ date: -1 })
+        .then(users => res.json(users))
+});
 
 
-// @route   POST api/users/signup
-// @desc    Create An User
-// @access  Public
+router.get('/user/:id', (req, res) => {
+    User.findById(req.params.id)
+        .then(user => res.json(user))
+});
 
 
-
-
+router.get('/token/:id', (req, res) => {
+    UserSession.findById(req.params.id)
+        .then(user => res.json(user))
+});
 
 
 router.post('/signup', (req, res, next) => {
@@ -23,11 +33,6 @@ router.post('/signup', (req, res, next) => {
         password,
         email
     } = body;
-
-
-    // let {
-    //     email
-    // } = body;
 
     if (!first_name) {
         return res.send({
@@ -92,6 +97,7 @@ router.post('/signup', (req, res, next) => {
                     message: 'Error: Server error'
                 });
             }
+            
             return res.send({
                 success: true,
                 message: 'Signed up'
@@ -100,10 +106,9 @@ router.post('/signup', (req, res, next) => {
     });
 });
 
-// @route   POST api/users/signin
-// @desc    Create An UserSession
-// @access  Public
+
 router.post('/signin', (req, res, next) => {
+    
     //const { body } = req;
     console.log(req.body)
     const body = req.body;
@@ -131,7 +136,7 @@ router.post('/signin', (req, res, next) => {
         email: email
     }, (err, users) => {
         if (err) {
-            console.log('err 2:', err);
+            console.log(err);
             return res.send({
                 success: false,
                 message: 'Error: server error'
@@ -169,6 +174,80 @@ router.post('/signin', (req, res, next) => {
     });
 });
 
+router.get('/verify', (req, res, next) => {
+    // Get the token
+    const { query } = req;
+    const { token } = query;
+    // Verify the token is one of a kind and it's not deleted.
+    UserSession.find({
+        _id: token,
+        isDeleted: false
+    }, (err, sessions) => {
+        if (err) {
+            console.log(err);
+            return res.send({
+                success: false,
+                message: 'Error: Server error'
+            });
+        }
+        if (sessions.length != 1) {
+            return res.send({
+                success: false,
+                message: 'Error: Invalid'
+            });
+        }
+        else {
+            // DO ACTION
+            return res.send({
+                success: true,
+                message: 'Good'
+            });
+        }
+    });
+});
+
+router.get('/logout', (req, res, next) => {
+    // Get the token
+    const { query } = req;
+    const { token } = query;
+    // ?token=test
+    // Verify the token is one of a kind and it's not deleted.
+    UserSession.findOneAndUpdate({
+        _id: token,
+        isDeleted: false
+    },
+        {
+            $set: {
+                isDeleted: true
+            }
+        }, null, (err, sessions) => {
+            if (err) {
+                console.log(err);
+                return res.send({
+                    success: false,
+                    message: 'Error: Server error'
+                });
+            }
+            return res.send({
+                success: true,
+                message: 'Good'
+            });
+        }
+    );
+});
+
+router.delete('/:id', (req, res) => {
+    User.findById(req.params.id)
+        .then(user => user.remove().then(() => res.json({ success: true })))
+        .catch(err => res.status(404).json({ success: false }));
+});
+
+
+router.delete('/token/:id', (req, res) => {
+    UserSession.findById(req.params.id)
+        .then(user => user.remove().then(() => res.json({ success: true })))
+        .catch(err => res.status(404).json({ success: false }));
+});
 
 
 module.exports = router;

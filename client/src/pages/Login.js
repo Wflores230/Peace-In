@@ -1,49 +1,103 @@
 import React from 'react'
-import { Grid, Paper, Avatar, TextField, Button, Typography, Link } from '@material-ui/core'
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+import { Container, Row, Col, Button } from 'reactstrap';
+import { Form, FormGroup, Input } from 'reactstrap';
+import SignUp from './Signup';
 
-const Login = () => {
+//Actions
+import { signinUser } from '../utils/actions'
 
-    const paperStyle = { padding: 20, height: '70vh', width: 280, margin: "20px auto" }
-    const avatarStyle = { backgroundColor: '#1bbd7e' }
-    const btnstyle = { margin: '8px 0' }
-    const signupColor = { color: '#e632ea' }
-    const loginColor = { padding: '70px', color: 'white', width: 360, float: 'left', margin: '8px 0' }
-    return (
-        <Grid>
-            <Paper elevation={10} style={paperStyle}>
-                <Grid align='center'>
-                    <Avatar style={avatarStyle}><LockOutlinedIcon /></Avatar>
-                    <h1>Sign In</h1>
-                </Grid>
-                <TextField label='Username' placeholder='Enter username' fullWidth required />
-                <TextField label='Password' placeholder='Enter password' type='password' fullWidth required />
-                <FormControlLabel
-                    control={
-                        <Checkbox
-                            name="checkedB"
-                            color="primary"
-                        />
-                    }
-                    label="Remember me"
-                />
-                <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
-                <Typography >
-                    <Link href="#" >
-                        Forgot password ?
-                    </Link>
-                </Typography>
-                <Typography style={loginColor}> Do you have an account ?
-                    < a href="/signup" style={signupColor} >
-                        Sign Up
-                    </a>
-                </Typography>
-            </Paper>
-        </Grid>
+export default class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modal: false,
+            signInError: '',
+            token: ''
+        };
 
-    )
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    async onSubmit() {
+        const loginUser = {
+            email: this.state.login_email,
+            password: this.state.login_password
+        }
+
+        const res = await signinUser(loginUser);
+        console.log(res);
+        if (res.success) {
+            this.setState({
+                signInError: res.message,
+                token: res.token
+            });
+            this.props.handleUserLogin()
+            this.props.history.push("/")
+        }
+        else {
+            this.setState({
+                signInError: res.message
+            });
+        }
+    }
+
+    render() {
+        const {
+            signInError,
+            token
+        } = this.state;
+
+        if (!token) {
+            return (
+                <div className="Login_CSS">
+                    <div className="jumbotron">
+                        <Container>
+                            <h1>Login</h1>
+                            <Form>
+                                <FormGroup>
+                                    <Input
+                                        type="email"
+                                        name="login_email"
+                                        id="login_email"
+                                        placeholder="Email"
+                                        onChange={this.onChange}
+                                    />
+                                </FormGroup>
+                                <FormGroup>
+                                    <Input
+                                        type="password"
+                                        name="login_password"
+                                        id="login_password"
+                                        placeholder="Password"
+                                        onChange={this.onChange}
+                                    />
+                                </FormGroup>
+                            </Form>
+                            <Row>
+                                <Col>
+                                    {
+                                        (signInError) ? (
+                                            <p>{signInError}</p>
+                                        ) : (null)
+                                    }
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <SignUp />
+                                </Col>
+                                <Col>
+                                    <Button color="primary" onClick={this.onSubmit}>Login</Button>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </div>
+                </div>
+            );
+        }
+    }
 }
-
-export default Login;
