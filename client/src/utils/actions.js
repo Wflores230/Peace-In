@@ -3,7 +3,7 @@ import axios from 'axios';
 import {
     getFromStorage,
     setInStorage,
-} from './storage';
+} from '../utils/storage';
 
 // Get One User
 export async function getUser(token) {

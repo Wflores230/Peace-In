@@ -6,7 +6,7 @@ router.route("/")
   .get(quotesController.findAll)
   .post(quotesController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/:id"
 router
   .route("/:id")
   .get(quotesController.findById)
