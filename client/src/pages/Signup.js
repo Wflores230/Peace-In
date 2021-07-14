@@ -17,10 +17,10 @@ export default class SignUp extends React.Component {
   }
 
   toggle() {
-    this.state.first_name = '';
-    this.state.last_name = '';
-    this.state.email = '';
-    this.state.password = '';
+    this.setstate.first_name = '';
+    this.setstate.last_name = '';
+    this.setstate.email = '';
+    this.setstate.password = '';
     this.setState({
       modal: !this.state.modal,
       signUpError: ''

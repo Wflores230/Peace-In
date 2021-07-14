@@ -23,9 +23,7 @@ const Yoga = (props) => {
                         <div>Yoga</div>
                     </div>
                 ))}
-                <Button></Button>
             </section>
-            <Button></Button>
         </>
 
     );
