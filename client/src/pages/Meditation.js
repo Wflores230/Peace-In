@@ -8,7 +8,7 @@ const Meditation = (props) => {
         const results = await props.search("meditation")
         setResults(results.data)
     }, [])
-    //to
+
     return (
         <>
             <section>

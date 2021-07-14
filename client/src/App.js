@@ -34,7 +34,7 @@ function App() {
       <div>
         <Navbar></Navbar>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/Login" component={Login} />
         <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/yoga" render={(props) => <Yoga {...props} search={getYoutubeResults} />} />
