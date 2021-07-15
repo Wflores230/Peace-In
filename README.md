@@ -48,4 +48,5 @@ MIT
 
 ## Preview of the App
 * This is how the app looks
-![UserDirectory Screenshot](./)
+![UserDirectory Screenshot](![Peace-IN](https://user-images.githubusercontent.com/76802722/125851794-4e44bade-10fe-4705-b128-8289f0edb30f.PNG)
+)
