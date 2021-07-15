@@ -44,9 +44,8 @@ MIT
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sdca/advdv)
 
 ## Deployment
-[Link]()
+[Link](https://evening-taiga-57191.herokuapp.com/#/)
 
 ## Preview of the App
 * This is how the app looks
-![UserDirectory Screenshot](![Peace-IN](https://user-images.githubusercontent.com/76802722/125851794-4e44bade-10fe-4705-b128-8289f0edb30f.PNG)
-)
+![UserDirectory Screenshot](client\src\images\Peace-IN.PNG)
