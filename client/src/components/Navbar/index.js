@@ -1,15 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 const Nav = (props) => {
     return (
         <nav class="nav">
-            {props.user ? <a href="Login">Log Out</a> : <a href="Login">Log In</a>}
+            {props.user ? <Link to="/login">Log Out</Link> : <Link to="login">Log In</Link>}
             <Link to="/">Main Menu</Link>
-            <Link to ="Review">Review</Link>
-            <Link to ="Favorites">Favorites</Link>
+            <Link to="/review">Review</Link>
+            <Link to="/favorites">Favorites</Link>
         </nav>
     )
 }
-
-export default Nav
+export default Nav;

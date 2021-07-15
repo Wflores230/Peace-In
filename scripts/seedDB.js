@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Quote = require("../models/quotes");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/peace-in"
+  "mongodb+srv://WFlores230:Willisaboss135@cluster0.opoxj.mongodb.net/peace-in?retryWrites=true&w=majority"
 );
 
 const quotesSeed = [
@@ -209,7 +209,7 @@ const quotesSeed = [
 ];
 Quote
   .remove({})
-  .then(() => Quotes.collection.insertMany(quotesSeed))
+  .then(() => Quote.collection.insertMany(quotesSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

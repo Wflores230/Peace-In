@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
 import Axios from 'axios'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, HashRouter } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
@@ -28,11 +28,11 @@ function App() {
   }
 
   return (
-    <Router>
+    <HashRouter>
       <div>
         <Navbar user={user}></Navbar>
         <Route exact path="/" component={ Homepage } />
-        <Route exact path="/Login" render={(props) => <Login {...props} handleUserLogin={handleUserLogin} />} />
+        <Route exact path="/login" render={(props) => <Login {...props} handleUserLogin={handleUserLogin} />} />
         <Route exact path="/favorites" component={ Favorites } />
         <Route exact path="/signup" component={ Signup } />
         <Route exact path="/yoga" render={(props) => <Yoga {...props} search={getYoutubeResults} />} />
@@ -41,7 +41,7 @@ function App() {
         <Route exact path="/homeworkout" render={(props) => <Homeworkout {...props} search={getYoutubeResults} />} />
 
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

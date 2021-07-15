@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/peace-in",
+  "mongodb+srv://WFlores230:Willisaboss135@cluster0.opoxj.mongodb.net/peace-in?retryWrites=true&w=majority",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
