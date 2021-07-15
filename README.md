@@ -48,4 +48,4 @@ MIT
 
 ## Preview of the App
 * This is how the app looks
-![UserDirectory Screenshot](client\src\images\Peace-IN.PNG)
+![UserDirectory Screenshot](.\client\src\images\Peace-IN.PNG)
