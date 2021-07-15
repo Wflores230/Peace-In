@@ -48,4 +48,4 @@ MIT
 
 ## Preview of the App
 * This is how the app looks
-![UserDirectory Screenshot]()
+![UserDirectory Screenshot](./)
