@@ -47,5 +47,4 @@ MIT
 [Link](https://evening-taiga-57191.herokuapp.com/#/)
 
 ## Preview of the App
-* This is how the app looks
-![UserDirectory Screenshot](client\src\images\Peace-IN.PNG)
+* This is how the app looks[(client\src\images\Peace-IN.PNG)]
