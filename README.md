@@ -48,4 +48,5 @@ MIT
 
 ## Preview of the App
 * This is how the app looks
-![UserDirectory Screenshot](.\client\src\images\Peace-IN.PNG)
+![UserDirectory Screenshot]![Screenshot (112)](https://user-images.githubusercontent.com/76802722/125868593-955569ea-e695-48da-a8cb-44d8919f8a35.png)
+
