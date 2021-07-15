@@ -72,7 +72,7 @@ const Homepage = () => {
         <section>
           <div class="about">
             <h2 class ="title">About</h2>
-            <p></p>
+            <h4>This is a mental health app intended to assist individuals to deal with stress.<br></br> This app allows users to choose their method of de-stressing with meditation, yoga, stretching, or at home workouts.  </h4>
           </div>
         </section>
       </main>
