@@ -26,7 +26,7 @@ const Homepage = () => {
   return (
     <>
       <header>
-        <h1 class="title" >Peace In</h1>
+        <h1 class="title">Peace In</h1>
       </header>
       <main>
         <section>

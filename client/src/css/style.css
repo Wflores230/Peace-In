@@ -124,6 +124,11 @@ p {
     
 }
 
+.picture {
+    margin-left: 100px;
+    
+}
+
 .content_img:hover {
     background-color: rgb(228, 213, 213);
     border-radius: 10%;
