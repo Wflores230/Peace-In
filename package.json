@@ -21,9 +21,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Wflores230/Peace-In/issues"
   },
-  "homepage": "https://github.com/Wflores230/Peace-In#readme",
   "devDependencies": {
     "concurrently": "^4.1.2",
     "nodemon": "^1.18.7"

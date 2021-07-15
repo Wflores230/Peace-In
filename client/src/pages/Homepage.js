@@ -7,9 +7,6 @@ import Stretching from "../images/str.jpg";
 import Homeworkout from "../images/hw.jpg";
 import { Link } from "react-router-dom";
 import API from "../utils/API";
-// TODO Use effect hook to query the backend api
-// TODO Store the array of quotes in the state
-// TODO Implement random index formula, max = lenght of array minus 1, min = 0
 
 const Homepage = () => {
   const [quote, setQuote] = useState({});
@@ -29,7 +26,7 @@ const Homepage = () => {
   return (
     <>
       <header>
-        <h1>Peace In</h1>
+        <h1 class="title" >Peace In</h1>
       </header>
       <main>
         <section>
@@ -45,9 +42,6 @@ const Homepage = () => {
           </div>
         </section>
         <section>
-          <div class="work">
-            <h2>ready to start?</h2>
-          </div>
           <div class="work-container">
             <div class="content_img">
               <Link to="/meditation">
@@ -77,7 +71,8 @@ const Homepage = () => {
         </section>
         <section>
           <div class="about">
-            <h2>About</h2>
+            <h2 class ="title">About</h2>
+            <p></p>
           </div>
         </section>
       </main>
