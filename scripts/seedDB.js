@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Quotes = require("../models/quotes");
+const Quote = require("../models/quotes");
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/peace-in"
@@ -207,7 +207,7 @@ const quotesSeed = [
     author: "George Bernard Shaw"
   }
 ];
-Quotes
+Quote
   .remove({})
   .then(() => Quotes.collection.insertMany(quotesSeed))
   .then(data => {

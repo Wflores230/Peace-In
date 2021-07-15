@@ -16,14 +16,6 @@ import API from './utils/API'
 
 
 function App() {
-  // const [results, setResults] = useState([])
-  // useEffect(() => {
-  //   Axios.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=yoga&type=video&key=youtubeApiKey').then(function (res) {
-  //     console.log(res)
-  //     setResults(res.data.results)
-  //   })
-
-  // }, [])
 
   const [user, setUser] = useState(false)
 
