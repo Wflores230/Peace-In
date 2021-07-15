@@ -15,14 +15,15 @@ app.use(routes);
 // app.use(passport.initialize());
 // app.use(passport.session());
 // require("./passport")(passport);
-if(process.env.NODE.ENV === 'production') {
+if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname,'build')));
-
+console.log(path.join(__dirname, 'build', 'index.html'))
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
   });
   
 }
+
 
 // Connect to the Mongo DB
 mongoose.connect(
